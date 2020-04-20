@@ -1,9 +1,9 @@
 /*
-  HC-SR501 Motion Sensor Demo
+  HC-SR501 PIRMotion Sensor Demo
   Motion sensor with delay
   Set Sensor for 3-second trigger
+  Utilizing a Corsair A120 Computer Fan (12V DC, 0.19A)
 
-  Utilizing a Corsair A120 Computer Fan
 */
 
 // Define Pins for LED
@@ -33,13 +33,13 @@ void setup() {
 
   // Setting up the PIR Sensor as the Input
   pinMode(pirPin, INPUT);
-
-  //  Initial 1 Minute dealy to stabilize sensor
+  
   digitalWrite(detectedLED, LOW);
   digitalWrite(dcFan, LOW);
   digitalWrite(readyLED, LOW);
   digitalWrite(waitLED, HIGH);
-  delay(60000); // 1 min, time in milliseconds
+  // Initial 1 Minute delay to stabilize/acclimatize sensor
+  delay(60000); 
   digitalWrite(readyLED, HIGH);
   digitalWrite(waitLED, LOW);
 
