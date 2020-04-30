@@ -53,12 +53,12 @@ void loop() {
   // booleans for motion detection
   if (pirValue == 1){
     digitalWrite(detectedLED, HIGH);
-    //    will trigger DC fan after 30s delay
-    delay(3000);
+    //    will trigger DC fan after 5s delay
+    delay(5000);
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
-    //    run DC fan for 30s
-    delay(30000);  
+    //    run DC fan for 10mins (600000ms)
+    delay(600000);  
   }
     else {
         digitalWrite(detectedLED, LOW);

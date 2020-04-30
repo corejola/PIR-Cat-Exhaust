@@ -6,10 +6,11 @@ A cat litter ventilation system utilizing an ***Arduino Uno*** and a HC-SR501 Pa
 1. Cat litter volume: 70ft<sup>3</sup>
 2. Typical bathroom exhaust: 8 air changes per hour
     - 560ft<sup>3</sup>/hr to be cycled through
+    - Looking up fan speed to ~50CFM to reduce run time
 
 # Questions:
 - Volumetric Flow Rate: Q = ?
-    - How long will the fan run?
+    - How long will the fan run? - 17mins (w/ a 32CFM fan)
     - Duct sizing. Diameter ~ 2-4"
 - How will fan speed be determined? pre-determined resistance?
     - How to measure the CFM? Static Pressure?
