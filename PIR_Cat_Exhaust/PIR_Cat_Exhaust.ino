@@ -57,8 +57,9 @@ void loop() {
     delay(5000);
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
-    //    run DC fan for 10mins (600000ms)
-    delay(600000);  
+ 
+    //  run DC fan for 13 mins with 45CFM fan 
+    delay(780000)
   }
     else {
         digitalWrite(detectedLED, LOW);
