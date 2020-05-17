@@ -23,9 +23,11 @@ A cat litter ventilation system utilizing an ***Arduino Uno*** and a HC-SR501 Pa
 2. PIR Ready
     - LED Green Indicator on
 3. PIR Detected
-    - LED Blue Indicator, delay 5s
+    - LED Green Indicator off
+    - LED Blue Indicator on, delay 5min
     - 12VDC Fan powered on for 10min
 4. PIR Reset
+    - LED Red on
     - LED Blue off
     - Fan off
     - Refer back to SOO #2.
@@ -33,8 +35,5 @@ A cat litter ventilation system utilizing an ***Arduino Uno*** and a HC-SR501 Pa
 ## Components:
 1. Arduino Uno
 2. HC-SR501 PIR Motion Detector
-3. Cosair AF120 Fan
+3. CG Fan 12VDC 45CFM
 4. P2N222A Transistor
-
-# Refereneces
-- DroneBot Workshop

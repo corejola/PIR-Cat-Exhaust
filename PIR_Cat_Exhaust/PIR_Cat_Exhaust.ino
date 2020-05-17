@@ -31,7 +31,7 @@ void setup() {
   pinMode(waitLED, OUTPUT);
   pinMode(dcFan, OUTPUT);
 
-  // Setting up the PIR Sensor as the Input
+  // Setting up the PIR Sensor as the Input, 1 or 0
   pinMode(pirPin, INPUT);
   
   digitalWrite(detectedLED, LOW);
@@ -53,20 +53,20 @@ void loop() {
   // booleans for motion detection
   if (pirValue == 1){
     digitalWrite(detectedLED, HIGH);
-    //    will trigger DC fan after 5s delay
-    delay(5000);
+    digitalWrite(readyLED,LOW);
+    //    will trigger DC fan after 5min delay
+    delay(30000);
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
  
     //  run DC fan for 13 mins with 45CFM fan 
-    delay(780000)
+    delay(780000);
   }
     else {
         digitalWrite(detectedLED, LOW);
     };
 
     // Sensor Reset Delay, 6 seconds
-
     if (motionDetected == 1) {
       digitalWrite(detectedLED, LOW);
       digitalWrite(dcFan, LOW);
