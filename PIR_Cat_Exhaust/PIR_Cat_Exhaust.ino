@@ -55,7 +55,7 @@ void loop() {
     digitalWrite(detectedLED, HIGH);
     digitalWrite(readyLED,LOW);
     //    will trigger DC fan after 5min delay
-    delay(30000);
+    delay(300000);
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
  
