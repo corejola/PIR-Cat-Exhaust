@@ -25,7 +25,7 @@ int motionDetected = 0;
 int pirValue;
 
 // Input for Push Button
-int buttonPin = 6;
+int buttonPin = 2;
 
 // button variable
 int buttonState = 0;
@@ -41,7 +41,7 @@ void setup() {
   pinMode(pirPin, INPUT);
 
   // Setting up push button as an input
-  pinMode(buttonPin, INPUT)
+  pinMode(buttonPin, INPUT);
   
   // Writing the outputs
   digitalWrite(detectedLED, LOW);
@@ -62,22 +62,6 @@ void loop() {
 
   buttonState = digitalRead(buttonPin);
 
-
-  // Add pushbutton code here - pushing button will run fan for 5 mins(300000ms)
-  if (buttonState == HIGH){
-    digitalWrite(readyLED, LOW);
-    digitalWrite(detectedLED, HIGH);
-    digitalWrite(dcFan, HIGH);
-    delay(300000);
-    digitalWrite(dcFan, LOW);
-    buttonState = LOW;
-  };
-
-  if(buttonState == LOW){
-    digitalWrite(readyLED, HIGH);
-    digitalWrite(detectedLED, LOW)
-  };
-
   // booleans for motion detection
   if (pirValue == 1){
     digitalWrite(detectedLED, HIGH);
@@ -95,7 +79,7 @@ void loop() {
   };
 
   // Sensor Reset Delay, 6 seconds
-  if (motionDetected == 1 ) {
+  if (motionDetected == 1) {
     digitalWrite(detectedLED, LOW);
     digitalWrite(dcFan, LOW);
     digitalWrite(readyLED, LOW);
@@ -106,5 +90,28 @@ void loop() {
     motionDetected = 0;
     
   };
+
+  if(motionDetected == 0){
+    // Add pushbutton code here - pushing button will run fan for 5 mins(300000ms)
+  if (buttonState == LOW){
+    digitalWrite(readyLED, LOW);
+    digitalWrite(detectedLED, HIGH);
+    digitalWrite(dcFan, HIGH);
+    delay(30000);
+    digitalWrite(dcFan, LOW);
+    buttonState = HIGH;
+  }
+  else if(buttonState == HIGH){
+    digitalWrite(readyLED, HIGH);
+    digitalWrite(detectedLED, LOW);
+    buttonState = LOW;
+  }
+  else{
+    digitalWrite(detectedLED, LOW);
+    
+  }
+  };
+
+
 
 }
