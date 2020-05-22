@@ -97,7 +97,7 @@ void loop() {
     digitalWrite(readyLED, LOW);
     digitalWrite(detectedLED, HIGH);
     digitalWrite(dcFan, HIGH);
-    delay(30000);
+    delay(300000);
     digitalWrite(dcFan, LOW);
     buttonState = HIGH;
   }
