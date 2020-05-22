@@ -1,12 +1,13 @@
 '''
 Quick CFM Calculator
+Cat Litter volume is 6ft^3
 '''
 # how long does the exhaust fan need to be on (t)
 
 time = 0
 cfm = int(input("Fan CFM Rating: "))
 
-litter_vol = 70
+litter_vol = 6
 air_change = 8
 
 

@@ -71,8 +71,8 @@ void loop() {
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
  
-    //  run DC fan for 13 mins with 45CFM fan 
-    delay(780000);
+    //  run DC fan for 10 mins with 45CFM fan 
+    delay(6000000);
   }
   else {
       digitalWrite(detectedLED, LOW);
@@ -93,23 +93,23 @@ void loop() {
 
   if(motionDetected == 0){
     // Add pushbutton code here - pushing button will run fan for 5 mins(300000ms)
-  if (buttonState == LOW){
-    digitalWrite(readyLED, LOW);
-    digitalWrite(detectedLED, HIGH);
-    digitalWrite(dcFan, HIGH);
-    delay(300000);
-    digitalWrite(dcFan, LOW);
-    buttonState = HIGH;
-  }
-  else if(buttonState == HIGH){
-    digitalWrite(readyLED, HIGH);
-    digitalWrite(detectedLED, LOW);
-    buttonState = LOW;
-  }
-  else{
-    digitalWrite(detectedLED, LOW);
-    
-  }
+    if (buttonState == LOW){
+      digitalWrite(readyLED, LOW);
+      digitalWrite(detectedLED, HIGH);
+      digitalWrite(dcFan, HIGH);
+      delay(300000);
+      digitalWrite(dcFan, LOW);
+      buttonState = HIGH;
+    }
+    else if(buttonState == HIGH){
+      digitalWrite(readyLED, HIGH);
+      digitalWrite(detectedLED, LOW);
+      buttonState = LOW;
+    }
+    else{
+      digitalWrite(detectedLED, LOW);
+      
+    }
   };
 
 
