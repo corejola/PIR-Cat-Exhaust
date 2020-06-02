@@ -8,6 +8,12 @@ A cat litter ventilation system utilizing an ***Arduino Uno*** and a HC-SR501 Pa
     - 48ft<sup>3</sup>/hr to be cycled through
     - Will run 47 CFM fan for 10 mins
 
+## Circuit Diagram
+![Circuit Diagram](PIR-Cat-Exhaust\PIR_Cat_Exhaust_Diagram & Notes)
+
+## System Diagram
+
+
 ## Sequence of Operations (SOO)
 1. Initial power up of the  HC-SR501 PIR sensor requires 1 minute for acclimatization to the infrared energy in the room.
     - LED Red Indicator on 60S
