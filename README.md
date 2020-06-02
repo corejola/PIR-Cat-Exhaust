@@ -9,7 +9,7 @@ A cat litter ventilation system utilizing an ***Arduino Uno*** and a HC-SR501 Pa
     - Will run 47 CFM fan for 10 mins
 
 ## Circuit Diagram
-![Circuit Diagram](https://github.com/corejola/PIR-Cat-Exhaust/blob/readmeUpdate/PIR_Cat_Exhaust_Diagram%20&%20Notes.png?raw=true)
+![Circuit Diagram](https://github.com/corejola/PIR-Cat-Exhaust/blob/master/PIR_Cat_Exhaust_Diagram%20&%20Notes.png?raw=true)
 
 ## System Diagram
 
