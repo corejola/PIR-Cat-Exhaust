@@ -92,7 +92,7 @@ void loop() {
   };
 
   if(motionDetected == 0){
-    // Add pushbutton code here - pushing button will run fan for 5 mins(300000ms)
+    // Add pushbutton code here - pushing button will run fan for 10mins(see buttonTimer variable)
     int buttonTimer = 10 * 60 * 1000
     if (buttonState == LOW){
       digitalWrite(readyLED, LOW);
