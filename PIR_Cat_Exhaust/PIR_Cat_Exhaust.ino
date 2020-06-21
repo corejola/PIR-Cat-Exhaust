@@ -66,13 +66,13 @@ void loop() {
   if (pirValue == 1){
     digitalWrite(detectedLED, HIGH);
     digitalWrite(readyLED,LOW);
-    //    will trigger DC fan after 5min delay
-    delay(300000);
+    //    will trigger DC fan after 3min delay
+    delay(180000);
     digitalWrite(dcFan, HIGH);
     motionDetected = 1;
  
-    //  run DC fan for 10 mins with 45CFM fan 
-    delay(600000);
+    //  run DC fan for 15 mins with 45CFM fan 
+    delay(900000);
   }
   else {
       digitalWrite(detectedLED, LOW);
@@ -93,11 +93,12 @@ void loop() {
 
   if(motionDetected == 0){
     // Add pushbutton code here - pushing button will run fan for 5 mins(300000ms)
+    int buttonTimer = 10 * 60 * 1000
     if (buttonState == LOW){
       digitalWrite(readyLED, LOW);
       digitalWrite(detectedLED, HIGH);
       digitalWrite(dcFan, HIGH);
-      delay(300000);
+      delay(buttonTimer);
       digitalWrite(dcFan, LOW);
       buttonState = HIGH;
     }
